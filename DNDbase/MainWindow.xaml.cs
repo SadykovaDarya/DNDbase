@@ -20,9 +20,45 @@ namespace DNDbase
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
+        public MainWindow() { 
             InitializeComponent();
         }
+   
+        Hero _newHero;
+
+        public Hero NewHero
+        {
+            get
+            {
+                return _newHero;
+            }
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (string.IsNullOrWhiteSpace(textBoxName.Text))
+            {
+                MessageBox.Show("Необходимо ввести фамилию");
+                textBoxName.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBoxRace.Text))
+            {
+                MessageBox.Show("Необходимо ввести расу");
+                textBoxRace.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBoxAspect.Text))
+            {
+                MessageBox.Show("Необходимо ввести класс");
+                textBoxAspect.Focus();
+                return;
+            }
+
+            _newHero = new Hero(textBoxName.Text, textBoxRace.Text, textBoxAspect.Text);
+            DialogResult = true;
+        }
+    
     }
 }

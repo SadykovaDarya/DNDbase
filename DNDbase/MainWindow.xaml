@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DNDbase"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Добавление героя" Height="350" Width="525">
+    <Grid Margin="0,-85,-574,-183">
+        <Button x:Name="button" Content="Создать" HorizontalAlignment="Left" Margin="446,466,0,0" VerticalAlignment="Top" Width="176" Height="43" FontSize="20" Click="button_Click"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="37" Margin="368,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"/>
+        <TextBox x:Name="textBoxRace" HorizontalAlignment="Left" Height="38" Margin="368,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"/>
+        <TextBox x:Name="textBoxAspect" HorizontalAlignment="Left" Height="38" Margin="368,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"/>
+        <Label x:Name="label" Content="Имя
+               " HorizontalAlignment="Left" Margin="368,90,0,0" VerticalAlignment="Top" Height="36" Width="109"/>
+        <Label x:Name="label1" Content="Раса
+               " HorizontalAlignment="Left" Margin="368,168,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Класс" HorizontalAlignment="Left" Margin="368,271,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
